@@ -1,0 +1,14 @@
+<cities>
+    <city>
+		<name>Sydney</name>
+		<value>Sydney</value>
+    </city>
+    <city>
+		<name>Melbourne</name>
+		<value>Melbourne</value>
+    </city>
+    <city>
+		<name>Wollongong</name>
+		<value>Wollongong</value>
+    </city>
+</cities>
