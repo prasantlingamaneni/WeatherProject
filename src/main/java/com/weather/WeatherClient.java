@@ -11,18 +11,16 @@ public class WeatherClient {
 	    private static String BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q=";
 	    private static String APP_KEY= "896919e0393d5d206d1f5e775c7f4b3a";
 
-	    public static String getWeatherData(String location) {
+	    public String getWeatherData(String location) {
 	    	HttpURLConnection con = null ;
 	        InputStream is = null;
 	        
 	        try {
-	            con = (HttpURLConnection) ( new URL(BASE_URL + location+"&APPID="+APP_KEY)).openConnection();
+	            con = (HttpURLConnection) ( new URL(BASE_URL + location+"&units=metric&APPID="+APP_KEY)).openConnection();
 	            con.setRequestMethod("GET");
 	            con.setDoInput(true);
 	            con.setDoOutput(true);
 	            con.connect();
-	 
-	            // Let's read the response
 	            StringBuffer buffer = new StringBuffer();
 	            is = con.getInputStream();
 	            BufferedReader br = new BufferedReader(new InputStreamReader(is));
@@ -42,10 +40,6 @@ public class WeatherClient {
 	        }
 	        return null;
 	    }
-	    
-	    public static void main(String args[]) {
-	    	String res = getWeatherData("sydney");
-	    	System.out.println(res);
-	    }
+
 }
 
