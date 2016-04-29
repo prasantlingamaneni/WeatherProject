@@ -85,8 +85,8 @@ $(document).ready(function() {
     	  var hour = a.getHours();    	  
     	  var min = a.getMinutes();
     	  var sec = a.getSeconds();
-    	  
-    	  if (hour == 0 && hour<12)
+
+    	  if (hour<12)
     	  { 
     		  hour = ((hour < 10) ? "0" + hour : hour);
     	      mid = "AM";
